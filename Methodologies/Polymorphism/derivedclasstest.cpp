@@ -4,6 +4,8 @@
 double BannerPrice(const Banner& info, int copies)
 {
 	float rate = copies < 5 ? 0.8 : 0.75;
+	//dynamic binding is used for calling a virtual member function (Area)
+	//on a reference (info) or pointer
 	return copies * rate * info.Area();
 }
 
